@@ -18,6 +18,12 @@ h1 {
   font-family: Monospace;
   margin: 1rem 0 3rem 0;
 }
+header h2 {
+  text-align: center;
+}
+header h4 {
+  text-align: center;
+}
 
 main {
   display: flex;
@@ -76,4 +82,12 @@ fieldset i.subtract {
   border: 1px solid black;
   margin: 0 100px;
   color: rgb(192, 33, 33);
+}
+.next {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 0 100px 20px 100px;
+  color: rgb(2, 61, 27);
 }
