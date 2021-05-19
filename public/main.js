@@ -67,6 +67,19 @@ function updateTeam2Name(event) {
   console.log(event.target.value)
   console.log(event)
 }
+function resetGame(event) {
+  score1 = 0
+  const scoreHeader1 = document.querySelector('section.team1 h3')
+
+  scoreHeader1.textContent = score1
+
+  score2 = 0
+  const scoreHeader2 = document.querySelector('section.team2 h3')
+
+  scoreHeader2.textContent = score2
+  const header = document.querySelector('h1')
+  header.textContent = 'My Score Board'
+}
 
 function main() {
   const scoreBoard1 = document.querySelector('section.team1')
@@ -82,6 +95,8 @@ function main() {
   document
     .querySelector('.team2 input')
     .addEventListener('input', updateTeam2Name)
+
+  document.querySelector('.reset').addEventListener('click', resetGame)
 }
 
 document.addEventListener('DOMContentLoaded', main)
