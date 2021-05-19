@@ -53,12 +53,35 @@ function handleTeam2Click(event) {
     header.textContent = 'Team 2 wins!'
   }
 }
+
+function updateTeam1Name(event) {
+  const team1Name = document.querySelector('.team1 h2')
+  team1Name.textContent = event.target.value
+  console.log(event.target.value)
+  console.log(event)
+}
+
+function updateTeam2Name(event) {
+  const team2Name = document.querySelector('.team2 h2')
+  team2Name.textContent = event.target.value
+  console.log(event.target.value)
+  console.log(event)
+}
+
 function main() {
   const scoreBoard1 = document.querySelector('section.team1')
   scoreBoard1.addEventListener('click', handleTeam1Click)
 
   const scoreBoard2 = document.querySelector('section.team2')
   scoreBoard2.addEventListener('click', handleTeam2Click)
+
+  document
+    .querySelector('.team1 input')
+    .addEventListener('input', updateTeam1Name)
+
+  document
+    .querySelector('.team2 input')
+    .addEventListener('input', updateTeam2Name)
 }
 
 document.addEventListener('DOMContentLoaded', main)
