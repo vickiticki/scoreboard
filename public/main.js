@@ -1,19 +1,32 @@
-let score = 0
+let score1 = 0
+let score2 = 0
 
 function handleTeam1Click(event) {
   const thingClickedOn = event.target
 
   if (thingClickedOn.classList.contains('add')) {
-    score++
+    score1++
   }
   if (thingClickedOn.classList.contains('subtract')) {
-    score--
+    score1--
   }
-  const scoreHeader = document.querySelector('h3')
+  const scoreHeader = document.querySelector('section.team1 h3')
 
-  scoreHeader.textContent = score
+  scoreHeader.textContent = score1
 }
+function handleTeam2Click(event) {
+  const thingClickedOn = event.target
 
+  if (thingClickedOn.classList.contains('add')) {
+    score2++
+  }
+  if (thingClickedOn.classList.contains('subtract')) {
+    score2--
+  }
+  const scoreHeader2 = document.querySelector('section.team2 h3')
+
+  scoreHeader2.textContent = score2
+}
 function main() {
   // const allButtons = document.querySelectorAll('i')
 
@@ -21,8 +34,11 @@ function main() {
   //   button.addEventListener('click', handleClickSquare)
   // })
 
-  const scoreBoard = document.querySelector('section.team1')
-  scoreBoard.addEventListener('click', handleTeam1Click)
+  const scoreBoard1 = document.querySelector('section.team1')
+  scoreBoard1.addEventListener('click', handleTeam1Click)
+
+  const scoreBoard2 = document.querySelector('section.team2')
+  scoreBoard2.addEventListener('click', handleTeam2Click)
 }
 
 document.addEventListener('DOMContentLoaded', main)
