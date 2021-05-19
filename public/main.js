@@ -105,15 +105,15 @@ function resetGame(event) {
 
   scoreHeader2.textContent = score2
   const header = document.querySelector('h1')
-  header.textContent = 'My Score Board'
+  header.textContent = 'VOLLEYBALL'
   const setsDisplay = document.querySelector('header h4')
   setsDisplay.textContent = 'Set: 1'
-  // sets1 = 0
-  // const setsDisplay = document.querySelector('section.team1 h4')
-  // setsDisplay.textContent = `Sets won: ${sets1}`
-  // sets2 = 0
-  // const setsDisplay = document.querySelector('section.team2 h4')
-  // setsDisplay.textContent = `Sets won: ${sets2}`
+  sets1 = 0
+  const sets1Display = document.querySelector('section.team1 h4')
+  sets1Display.textContent = `Sets won: ${sets1}`
+  sets2 = 0
+  const sets2Display = document.querySelector('section.team2 h4')
+  sets2Display.textContent = `Sets won: ${sets2}`
 }
 
 function nextSet(event) {
